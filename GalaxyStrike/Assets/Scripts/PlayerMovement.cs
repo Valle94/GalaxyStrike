@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float controlSpeed = 50f;
+    [SerializeField] private float boostFactor = 2f;
     [SerializeField] private float xClampRange = 10f;
     [SerializeField] private float yClampRange = 10f;
 
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f;
 
     Vector2 movement;
+    float boost;
 
     void Update()
     {
@@ -22,6 +24,19 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputValue value)
     {
         movement = value.Get<Vector2>();
+    }
+
+    public void OnBoost(InputValue value)
+    {
+        boost = value.Get<float>();
+        if (boost >= 0.5f)
+        {
+            controlSpeed *= boostFactor;    
+        }
+        else
+        {
+            controlSpeed = 50f;
+        }
     }
 
     private void ProcessTranslation()
