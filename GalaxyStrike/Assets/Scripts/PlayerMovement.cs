@@ -14,20 +14,20 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
     float boost;
-    bool isFiring = false;
-    ParticleSystem myParticleSystem;
+    //bool isFiring = false;
+    //ParticleSystem myParticleSystem;
 
     void Start()
     {
-        myParticleSystem = GetComponent<ParticleSystem>();
+        //myParticleSystem = GetComponent<ParticleSystem>();
     }
 
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
-        ProcessFiring();
-        Debug.Log(isFiring);
+        //ProcessFiring();
+        //Debug.Log(isFiring);
     }
 
     public void OnMove(InputValue value)
@@ -48,10 +48,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    public void OnFire(InputValue value)
-    {
-        isFiring = value.isPressed;
-    }
+    // public void OnFire(InputValue value)
+    // {
+    //     isFiring = value.isPressed;
+    // }
 
     private void ProcessTranslation()
     {
@@ -74,22 +74,22 @@ public class PlayerMovement : MonoBehaviour
         transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    private void ProcessFiring()
-    {
-        switch(isFiring)
-        {
-            case true:
-                {
-                    Debug.Log("FIRE!!");
-                    myParticleSystem.Play();
-                    break;
-                }
-            case false:
-                {
-                    Debug.Log("CEASE FIRE!!");
-                    myParticleSystem.Stop();
-                    break;
-                }
-        }
-    }
+    // private void ProcessFiring()
+    // {
+    //     switch(isFiring)
+    //     {
+    //         case true:
+    //             {
+    //                 Debug.Log("FIRE!!");
+    //                 myParticleSystem.Play();
+    //                 break;
+    //             }
+    //         case false:
+    //             {
+    //                 Debug.Log("CEASE FIRE!!");
+    //                 myParticleSystem.Stop();
+    //                 break;
+    //             }
+    //     }
+    // }
 }
