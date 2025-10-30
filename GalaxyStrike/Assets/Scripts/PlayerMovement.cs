@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float controlPitchFactor = 15f;
     [SerializeField] private float rotationSpeed = 10f;
 
+    public int Shield { get; set; } = 0;
     Vector2 movement;
     float boost;
     //bool isFiring = false;
