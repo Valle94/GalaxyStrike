@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 3326500198006959835}
   serializedVersion: 2
   m_LocalRotation: {x: 0.094195195, y: 0, z: 0, w: 0.99555373}
-  m_LocalPosition: {x: 0, y: 19.1, z: -44.57}
+  m_LocalPosition: {x: 0, y: 11.5, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,6 +295,30 @@ PrefabInstance:
       propertyPath: targetPoint
       value: 
       objectReference: {fileID: 8251818144653137603}
+    - target: {fileID: 3241017110938402812, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241017110938402812, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241017110938402812, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101808854092324465, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101808854092324465, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101808854092324465, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.21
+      objectReference: {fileID: 0}
     - target: {fileID: 6574250922152778349, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -334,6 +358,14 @@ PrefabInstance:
     - target: {fileID: 6574250922152778349, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783512403981087159, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: xClampRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783512403981087159, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
+      propertyPath: yClampRange
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7784382159104534643, guid: 70d86c4912a6e054cb964960a6b38ac9, type: 3}
       propertyPath: m_Name
