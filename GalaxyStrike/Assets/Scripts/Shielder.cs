@@ -2,21 +2,19 @@ using UnityEngine;
 
 public class Shielder : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-
     PlayerMovement playerMovement;
 
     void Start()
     {
-        playerMovement = player.GetComponent<PlayerMovement>();
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
     }
     
     void OnParticleCollision(GameObject other)
     {
         Destroy(gameObject);
-        if (playerMovement.Shield == 0)
+        if (playerMovement.Shield < 3)
         {
-            playerMovement.Shield += 3;
+            playerMovement.Shield = 3;
         }
         Debug.Log(playerMovement.Shield);
     }

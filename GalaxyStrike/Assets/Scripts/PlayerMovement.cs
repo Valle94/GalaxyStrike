@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float controlRollFactor = 30f;
     [SerializeField] private float controlPitchFactor = 15f;
     [SerializeField] private float rotationSpeed = 10f;
+
+    [SerializeField] Slider shieldSlider;
 
     public int Shield { get; set; } = 0;
     Vector2 movement;
@@ -27,8 +30,10 @@ public class PlayerMovement : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        shieldSlider.value = Shield;
         //ProcessFiring();
         //Debug.Log(isFiring);
+        Debug.Log($"Shield: {Shield}");
     }
 
     public void OnMove(InputValue value)

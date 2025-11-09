@@ -25,6 +25,7 @@ public class CollisionHandler : MonoBehaviour
         }
         else
         {
+            Debug.Log($"Shield: {playerMovement.Shield}");
             playerMovement.Shield -= 1;
         }
     }
