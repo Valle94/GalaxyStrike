@@ -16,6 +16,7 @@ public class CollisionHandler : MonoBehaviour
         if (playerMovement.Shield <= 0)
         {
             Instantiate(playerDestroyVFX, gameObject.transform.position, Quaternion.identity);
+            Destroy(gameObject);
             Debug.Log($"Hit {other.name}");
         }
         else
