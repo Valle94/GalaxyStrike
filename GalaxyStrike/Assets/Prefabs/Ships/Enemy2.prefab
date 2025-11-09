@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: hitPoints
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1666931649293507913, guid: 6427cd8c0b865ce46a63c8145939bde4, type: 3}
+      propertyPath: scoreValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3864929736041959431, guid: 6427cd8c0b865ce46a63c8145939bde4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.645673
